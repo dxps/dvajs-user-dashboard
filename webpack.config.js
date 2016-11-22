@@ -16,8 +16,6 @@ module.exports = function (webpackConfig, env) {
 
   // CSS Modules Support.
   // Parse all less files as css module.
-  console.log(webpackConfig.module.loaders, '!!!!!!!')
-
   webpackConfig.module.loaders.forEach(function(loader, index) {
     if (typeof loader.test === 'function' && loader.test.toString().indexOf('\\.less$') > -1) {
       loader.include = [/node_modules/, /global\.less/]; // treat global.less as non-css-modules less file
@@ -36,8 +34,6 @@ module.exports = function (webpackConfig, env) {
       loader.test = /\.css$/;
     }
   });
-
-  console.log(webpackConfig.module.loaders)
 
   return webpackConfig;
 };
