@@ -7,7 +7,6 @@ module.exports = function (webpackConfig, env) {
   webpackConfig.babel.plugins.push('transform-runtime');
   webpackConfig.babel.plugins.push(['import', {
     libraryName: 'antd',
-    style: 'css'  // if true, use less
   }]);
 
   // Enable hmr for development.
@@ -15,13 +14,24 @@ module.exports = function (webpackConfig, env) {
     webpackConfig.babel.plugins.push('dva-hmr');
   }
 
+  // CSS Modules Support.
   // Parse all less files as css module.
-  webpackConfig.module.loaders.forEach(function (loader, index) {
+  webpackConfig.module.loaders.forEach(function(loader, index) {
     if (typeof loader.test === 'function' && loader.test.toString().indexOf('\\.less$') > -1) {
-      loader.test = /\.dont\.exist\.file/;
+      loader.include = [/node_modules/, /global\.less/]; // treat global.less as non-css-modules less file
+      loader.test = /\.less$/;
     }
     if (loader.test.toString() === '/\\.module\\.less$/') {
+      loader.exclude = [/node_modules/, /global\.less/]; // treat global.less as non-css-modules less file
       loader.test = /\.less$/;
+    }
+    if (typeof loader.test === 'function' && loader.test.toString().indexOf('\\.css$') > -1) {
+      loader.include = /node_modules/;
+      loader.test = /\.css$/;
+    }
+    if (loader.test.toString() === '/\\.module\\.css$/') {
+      loader.exclude = /node_modules/;
+      loader.test = /\.css$/;
     }
   });
 
