@@ -36,5 +36,6 @@
     "start": "dora --plugins \"proxy,webpack,webpack-hmr,browser-history?index=/src/index.html\"",
     "lint": "eslint --fix --ext .js,.jsx .",
     "build": "atool-build"
-  }
+  },
+  "theme": "./theme.js"
 }
