@@ -31,8 +31,8 @@ const UserSearch = ({
               initialValue: field || 'name',
             })(
               <Select>
-                <Select.Option value="name">名字</Select.Option>
-                <Select.Option value="address">地址</Select.Option>
+                <Select.Option value="name">name</Select.Option>
+                <Select.Option value="address">address</Select.Option>
               </Select>
             )}
           </Form.Item>
@@ -45,11 +45,11 @@ const UserSearch = ({
               <Input type="text" />
             )}
           </Form.Item>
-          <Button style={{ marginRight: '10px' }} type="primary" htmlType="submit">搜索</Button>
+          <Button style={{ marginRight: '10px' }} type="primary" htmlType="submit">Search</Button>
         </Form>
       </div>
       <div className={styles.create}>
-        <Button type="ghost" onClick={onAdd}>添加</Button>
+        <Button type="ghost" onClick={onAdd}>Add</Button>
       </div>
     </div>
   );

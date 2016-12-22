@@ -34,17 +34,17 @@ const UserModal = ({
 
   function checkNumber(rule, value, callback) {
     if (!value) {
-      callback(new Error('年龄未填写'));
+      callback(new Error('Age must be provided.'));
     }
     if (!/^[\d]{1,2}$/.test(value)) {
-      callback(new Error('年龄不合法'));
+      callback(new Error('Age must be a number.'));
     } else {
       callback();
     }
   }
 
   const modalOpts = {
-    title: '修改用户',
+    title: 'User Edit',
     visible,
     onOk: handleOk,
     onCancel,
@@ -54,21 +54,21 @@ const UserModal = ({
     <Modal {...modalOpts}>
       <Form horizontal>
         <FormItem
-          label="姓名："
+          label="Name："
           hasFeedback
           {...formItemLayout}
         >
           {getFieldDecorator('name', {
             initialValue: item.name,
             rules: [
-              { required: true, message: '名称未填写' },
+              { required: true, message: 'Name must be provided.' },
             ],
           })(
             <Input type="text" />
           )}
         </FormItem>
         <FormItem
-          label="年龄："
+          label="Age："
           hasFeedback
           {...formItemLayout}
         >
@@ -82,14 +82,14 @@ const UserModal = ({
           )}
         </FormItem>
         <FormItem
-          label="住址："
+          label="Address："
           hasFeedback
           {...formItemLayout}
         >
           {getFieldDecorator('address', {
             initialValue: item.address,
             rules: [
-              { required: true, message: '不能为空' },
+              { required: true, message: 'Address must be provided.' },
             ],
           })(
             <Input type="address" />

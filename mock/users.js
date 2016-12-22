@@ -18,6 +18,7 @@ if (!global.tableListData) {
       current: 1
     }
   });
+
   tableListData = data;
   global.tableListData = tableListData;
 } else {

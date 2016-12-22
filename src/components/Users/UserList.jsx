@@ -8,27 +8,27 @@ function UserList({
   onEditItem,
   }) {
   const columns = [{
-    title: '姓名',
+    title: 'name',
     dataIndex: 'name',
     key: 'name',
     render: (text) => <a href="#">{text}</a>,
   }, {
-    title: '年龄',
+    title: 'age',
     dataIndex: 'age',
     key: 'age',
   }, {
-    title: '住址',
+    title: 'address',
     dataIndex: 'address',
     key: 'address',
   }, {
-    title: '操作',
+    title: 'operation',
     key: 'operation',
     render: (text, record) => (
       <p>
-        <a onClick={() => onEditItem(record)}>编辑</a>
+        <a onClick={() => onEditItem(record)}>edit</a>
         &nbsp;
-        <Popconfirm title="确定要删除吗？" onConfirm={() => onDeleteItem(record.id)}>
-          <a>删除</a>
+        <Popconfirm title="Are you sure you want to delete？" onConfirm={() => onDeleteItem(record.id)}>
+          <a>delete</a>
         </Popconfirm>
       </p>
     ),

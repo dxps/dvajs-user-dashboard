@@ -77,9 +77,9 @@ function Users({ location, dispatch, users }) {
     },
   };
 
-  // 解决 Form.create initialValue 的问题
-  // 每次创建一个全新的组件, 而不做diff
-  // 如果你使用了redux, 请移步 http://react-component.github.io/form/examples/redux.html
+  // Use Form.create initialValue
+  // Every time you create a new component, rather than diff
+  // If you are using Redux, see http://react-component.github.io/form/examples/redux.html
   const UserModalGen = () =>
     <UserModal {...userModalProps} />;
 
