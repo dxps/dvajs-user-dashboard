@@ -5,7 +5,7 @@ import styles from './HomePage.less';
 function HomePage() {
     return (
         <div className={styles.normal}>
-            <h1>Hello Antd.</h1>
+            <h1>Hello</h1>
             <hr />
             <ul className={styles.list}>
                 <li>You can go to <Link to="/users">/users</Link></li>

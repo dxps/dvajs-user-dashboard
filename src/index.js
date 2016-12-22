@@ -1,7 +1,10 @@
 import './index.html';
 import './global.less';
 import dva from 'dva';
+
 import ReactDOM from 'react-dom';
+import React from 'react';
+
 import createLoading from 'dva-loading';
 import { browserHistory } from 'dva/router';
 
@@ -10,6 +13,7 @@ import { LocaleProvider } from 'antd';
 import antdEn from 'antd/lib/locale-provider/en_US';
 import appLocaleData from 'react-intl/locale-data/en';
 import enMessages from './locales/en';
+
 
 window.appLocale = {
     messages: {
@@ -43,7 +47,8 @@ app.model(require('./models/users'));
 app.router(require('./router'));
 
 // 5. Start
-const App = app.start('#root');
+// const App = app.start('#root');
+const App = app.start();
 
 ReactDOM.render(
     <LocaleProvider locale={appLocale.antd}>
