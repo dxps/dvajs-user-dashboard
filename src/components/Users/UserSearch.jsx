@@ -31,8 +31,8 @@ const UserSearch = ({
               initialValue: field || 'name',
             })(
               <Select>
-                <Select.Option value="name">name</Select.Option>
-                <Select.Option value="address">address</Select.Option>
+                <Select.Option value="name">name &nbsp; </Select.Option>
+                <Select.Option value="address">address &nbsp; </Select.Option>
               </Select>
             )}
           </Form.Item>

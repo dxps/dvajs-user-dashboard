@@ -8,7 +8,7 @@ const formItemLayout = {
   },
   wrapperCol: {
     span: 14,
-  },
+  }
 };
 
 const UserModal = ({
@@ -44,7 +44,7 @@ const UserModal = ({
   }
 
   const modalOpts = {
-    title: 'User Edit',
+    title: 'User Management',
     visible,
     onOk: handleOk,
     onCancel,
