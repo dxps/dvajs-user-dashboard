@@ -1,14 +1,23 @@
 module.exports = () => {
     return {
-        '@font-size-lg': '14px',
-        '@btn-padding-lg': '4px 15px 3px 15px',
-        '@primary-color': '#069165',
-        '@link-color': '#069165',
-        '@border-radius-base': '2px',
-        '@icon-url': '"/assets/fonts/iconfont/iconfont"',
         '@font-family': '"LatoWeb"',
         '@font-size-base': '14px',
-        '@line-height-base': '1.2',
-        '@text-color': '#333'
+        '@font-size-lg': '14px',
+        '@text-color': '#333',
+
+        '@line-height-base': '1.5',
+
+        '@border-radius-base': '4px',
+        '@border-radius-sm': '4px',
+
+        '@btn-padding-lg': '6px 15px 3px 15px',
+
+        '@primary-color': '#069165',
+        '@link-color': '#069165',
+
+        '@icon-url': '"/assets/fonts/iconfont/iconfont"',
+
+        '@input-height-lg': '32px'
+
     };
 };
