@@ -5,10 +5,10 @@ import styles from './HomePage.less';
 function HomePage() {
     return (
         <div className={styles.normal}>
-            <h1>Hello</h1>
+            <h1>dva.js sample</h1>
             <hr />
             <ul className={styles.list}>
-                <li>You can go to <Link to="/users">/users</Link></li>
+                <li><Link to="/users">Users Management</Link></li>
             </ul>
         </div>
     );

@@ -27,7 +27,7 @@ function UserList({
       <p>
         <a onClick={() => onEditItem(record)}>edit</a>
         &nbsp;
-        <Popconfirm title="Are you sure you want to delete？" onConfirm={() => onDeleteItem(record.id)}>
+        <Popconfirm title="Are you sure you want to delete ?" onConfirm={() => onDeleteItem(record.id)}>
           <a>delete</a>
         </Popconfirm>
       </p>
