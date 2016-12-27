@@ -1,10 +1,8 @@
-# User Dashboard
+# dva.js sample > User Dashboard
 
 ---
 
-## Demo
-
-![](https://zos.alipayobjects.com/rmsportal/TTznIRNZINxGJaa.gif)
+![](https://github.com/visvadw/dvajs-user-dashboard/blob/master/assets/show/dvajs-user-dashboard-demo.gif)
 
 ## Usage
 
